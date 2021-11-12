@@ -1,20 +1,18 @@
 on: [workflow_dispatch]
 
 jobs:
-  custom-js-action-job:
-    
-    runs-on:ubuntu-latest
-    
-    name: Custom JS Github Action
-    
-    
-    steps:
-      -name: First Custom GitHub Actions
-       id: mjsids
-       uses: Meiyanthan/custom-action-simple@v1.1
-       
-       with:
-        name-of-user: 'Welcome Manikandan!!!'
+    custom-js-action-job:
+        name: "Custom JS Github Action"
+        runs-on: ubuntu-latest
+        steps:
         
-      -name: Output of Timestamp
-       run: echo "The time was ${{step.mjsids.outputs.time}}"
+          - name: "First Custom GitHub Action"
+            id: mjsids
+            uses: Meiyanthan/custom-action-simple@v1.1
+     
+            with:
+                name-of-user: 'Welcome Manikandan!!!'
+   
+        
+          - name: Output of Timestamp
+            run: echo "The time was ${{step.mjsids.outputs.time}}"
