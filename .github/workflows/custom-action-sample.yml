@@ -1,3 +1,4 @@
+name: "First Custom GitHub Action"
 on: [workflow_dispatch]
 
 jobs:
